@@ -1,0 +1,21 @@
+{
+  "npmScope": "ss",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "ng-test-app": {
+      "tags": []
+    },
+    "ng-test-app-e2e": {
+      "tags": []
+    },
+    "nest-test-app": {
+      "tags": []
+    }
+  }
+}
