@@ -22,7 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     OverlayModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule // これが入ると動かなくなる
   ],
   providers: [HelloApiService],
   bootstrap: [AppComponent]
