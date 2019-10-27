@@ -12,6 +12,7 @@ export class AppComponent {
   constructor(private helloApiService: HelloApiService) {}
 
   ngOnInit(): void {
+    console.log('AppComponent start')
     this.helloApiService.getHello()
             .then((hello => {
               this.title = hello;

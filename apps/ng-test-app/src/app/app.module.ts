@@ -8,15 +8,21 @@ import { OverlayModule } from '@servrox/animations-lib';
 
 import { HttpClientModule }    from '@angular/common/http';
 import { HelloApiService } from './hello-api.service';
+import { HeroesComponent } from './heroes/heroes.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    HeroesComponent
+  ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     OverlayModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [HelloApiService],
   bootstrap: [AppComponent]
