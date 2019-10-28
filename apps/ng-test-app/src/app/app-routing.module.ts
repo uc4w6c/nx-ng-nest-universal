@@ -12,8 +12,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes 
-    /* 
-      これも追加してみたけどだめだった 
+      /* これも追加してみたけどだめだった 
       , { initialNavigation: 'enabled' } */
     )],
   exports: [RouterModule]

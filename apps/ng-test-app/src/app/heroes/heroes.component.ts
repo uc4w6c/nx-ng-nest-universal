@@ -11,6 +11,8 @@ export class HeroesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('heroes start')
+    this.hero = 'SSR test'
   }
 
 }

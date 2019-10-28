@@ -9,6 +9,13 @@ nx-ng-nest-universal/apps/ng-test-app/src/appで、
 ng generate component heroes --module=app.module.ts
 
 
+進捗メモ
+・2019/10/28
+app.module.tsからRouterModuleを削除することでRoutingが動いた
+が、サーバ・クライアントそれぞれでレンダリングしているようにみえる
+
+
+
 色々参考
 ・ここいいかも
 https://github.com/kamilmysliwiec/universal-nest
