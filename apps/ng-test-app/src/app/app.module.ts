@@ -19,10 +19,13 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    /*
+     MEMO: AppRoutingModuleが入るからこれは不要になる。あるとエラー
+     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    */
     OverlayModule,
     HttpClientModule,
-    AppRoutingModule // これが入ると動かなくなる
+    AppRoutingModule
   ],
   providers: [HelloApiService],
   bootstrap: [AppComponent]
