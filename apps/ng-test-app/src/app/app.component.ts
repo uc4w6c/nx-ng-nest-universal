@@ -13,9 +13,11 @@ export class AppComponent {
 
   ngOnInit(): void {
     console.log('AppComponent start')
+    const date = new Date().getTime();
+    console.log('now:' + date.toString())
     this.helloApiService.getHello()
             .then((hello => {
-              this.title = hello;
+              this.title = hello + date.toString();
               console.log('title:' + this.title);
             }))
   }
