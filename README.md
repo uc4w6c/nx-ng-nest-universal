@@ -23,7 +23,16 @@ npm install @gorniv/ngx-transfer-http --save
 npm install @gorniv/ngx-universal --save
 をやってみた。transfer-httpは間違えた。違いはわからん。。。
 
+ここかも
+https://angular.io/api/router/Resolve
+
+あーhttpClientを利用していないのがいけないかも
+
+
 
 色々参考
 ・ここいいかも
 https://github.com/kamilmysliwiec/universal-nest
+
+・universalガイド
+https://angular.io/guide/universal
