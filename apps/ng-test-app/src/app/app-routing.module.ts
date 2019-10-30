@@ -13,7 +13,8 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes 
       /* これも追加してみたけどだめだった
-      , { initialNavigation: 'enabled' } */
+         一応追加したままにしておく */
+      , { initialNavigation: 'enabled' }
     )],
   exports: [RouterModule]
 })
