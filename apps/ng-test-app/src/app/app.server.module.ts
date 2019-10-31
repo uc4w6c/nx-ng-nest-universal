@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ServerModule } from '@angular/platform-server';
-import { BrowserModule } from '@angular/platform-browser';
+import { ServerModule, ServerTransferStateModule } from '@angular/platform-server';
 
 import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
@@ -13,11 +12,13 @@ import { UniversalInterceptorService } from './interceptors/universal-intercepto
   imports: [
     AppModule,
     ServerModule,
+    ServerTransferStateModule,
     ModuleMapLoaderModule,
     // 追加してみる → 変わらなかった
     // BrowserModule.withServerTransition({ appId: 'serverApp' })
   ],
   bootstrap: [AppComponent],
+  /*
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
@@ -25,5 +26,6 @@ import { UniversalInterceptorService } from './interceptors/universal-intercepto
       multi: true
     },
   ]
+  */
 })
 export class AppServerModule {}

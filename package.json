@@ -60,6 +60,7 @@
     "@nestjs/core": "^6.2.4",
     "@nestjs/ng-universal": "^1.1.1",
     "@nestjs/platform-express": "^6.2.4",
+    "@nguniversal/common": "^8.1.1",
     "@nguniversal/express-engine": "^7.1.1",
     "@nguniversal/module-map-ngfactory-loader": "^7.1.1",
     "@servrox/animations-lib": "^1.0.2",

@@ -11,6 +11,7 @@ import { HelloApiService } from './hello-api.service';
 import { HeroesComponent } from './heroes/heroes.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import {TransferHttpCacheModule} from '@nguniversal/common';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    TransferHttpCacheModule,
     /*
      MEMO: AppRoutingModuleが入るからこれは不要になる。あるとエラー
      RouterModule.forRoot([], { initialNavigation: 'enabled' }),
