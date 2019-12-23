@@ -29,8 +29,12 @@ export class WebsocketComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     if (this.isBrowser) {
-      this.websocketService.connect('0')
-      this.connection = this.websocketService.on('identity').subscribe(data => {
+      // this.websocketService.connect('0');
+      this.websocketService.connect();
+      console.log(this.websocketService.emit('hello', 'hello'));
+
+      this.websocketService.emit('events', { test: 'test' });
+      this.connection = this.websocketService.on('events').subscribe(data => {
         // this.data = data;
         this.message = data;
       })

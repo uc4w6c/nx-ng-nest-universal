@@ -4,6 +4,7 @@ import { join } from 'path';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { EventsGateway } from './events.gateway';
 
 const BROWSER_DIR = join(process.cwd(), 'dist', 'apps', 'ng-test-app');
 applyDomino(global, join(BROWSER_DIR, 'index.html'));
@@ -17,6 +18,6 @@ applyDomino(global, join(BROWSER_DIR, 'index.html'));
     })
   ],
   controllers: [AppController],
-  providers: [AppService]
+  providers: [AppService, EventsGateway]
 })
 export class AppModule {}
