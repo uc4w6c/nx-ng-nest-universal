@@ -2,12 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
+import { WebsocketComponent } from './websocket/websocket.component';
 
 const routes: Routes = [
   {
     path: 'heroes',
     component: HeroesComponent
-  }
+  },
+  {
+    path: 'websocket',
+    component: WebsocketComponent
+  },
 ];
 
 @NgModule({

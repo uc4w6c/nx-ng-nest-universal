@@ -36,3 +36,6 @@ https://github.com/kamilmysliwiec/universal-nest
 
 ・universalガイド
 https://angular.io/guide/universal
+
+websocket
+https://qiita.com/cilly/items/833bc20784b0a7d56d03

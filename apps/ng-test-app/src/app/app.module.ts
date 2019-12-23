@@ -12,11 +12,14 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import {TransferHttpCacheModule} from '@nguniversal/common';
+import { WebsocketComponent } from './websocket/websocket.component';
+import { WebsocketService } from './websocket.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    HeroesComponent,
+    WebsocketComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -29,7 +32,7 @@ import {TransferHttpCacheModule} from '@nguniversal/common';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [HelloApiService],
+  providers: [HelloApiService, WebsocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
