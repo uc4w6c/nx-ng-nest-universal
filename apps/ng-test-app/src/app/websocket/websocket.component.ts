@@ -20,22 +20,26 @@ export class WebsocketComponent implements OnInit, OnDestroy {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
-  /*
   onClick(){
-    this.websocketService.emit('events', this.data);
-    this.data = '';
+    // this.websocketService.post('identity', 0);
+    console.log('click start')
+    this.websocketService.post('identity', 0).then((response) => {
+      console.log('click aa')
+      console.log(response);
+    })
+    console.log('click end')
   }
-  */
 
   ngOnInit() {
     if (this.isBrowser) {
       // this.websocketService.connect('0');
       this.websocketService.connect();
-      console.log(this.websocketService.emit('hello', 'hello'));
+      // console.log(this.websocketService.emit('hello', 'hello'));
 
       this.websocketService.emit('events', { test: 'test' });
       this.connection = this.websocketService.on('events').subscribe(data => {
         // this.data = data;
+        console.log(data);
         this.message = data;
       })
     }

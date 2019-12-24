@@ -39,3 +39,8 @@ https://angular.io/guide/universal
 
 websocket
 https://qiita.com/cilly/items/833bc20784b0a7d56d03
+
+
+・以下エラーの対応
+RangeError: Maximum call stack size exceeded
+https://stackoverflow.com/questions/27376522/node-js-socket-io-maximum-call-stack-size-exceeded

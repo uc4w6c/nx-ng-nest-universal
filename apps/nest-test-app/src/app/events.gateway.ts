@@ -22,22 +22,22 @@ export class EventsGateway {
   }
   */
 
+  /*
   @SubscribeMessage('hello')
-  handleEvent(@MessageBody() data: string): string {
+  handleEvent(data: string): string {
     return data;
   }
+  */
 
-  /*
   @SubscribeMessage('events')
-  findAll(@MessageBody() data: any): Observable<WsResponse<number>> {
+  findAll(/*@MessageBody()*/ data: any): Observable<WsResponse<number>> {
     console.log('events start')
     return from([1, 2, 3]).pipe(map(item => ({ event: 'events', data: item })));
   }
 
   @SubscribeMessage('identity')
-  async identity(@MessageBody() data: number): Promise<number> {
+  async identity( data: number): Promise<number> {
     console.log('identity start')
     return data;
   }
-  */
 }

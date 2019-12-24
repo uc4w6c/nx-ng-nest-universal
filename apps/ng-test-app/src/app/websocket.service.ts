@@ -33,4 +33,36 @@ export class WebsocketService {
     });
     return observable;
   }
+
+  post(emitName: String, data?) {
+    // this.socket.emit(emitName, data, response => console.log(response));
+    // this.socket.on(emitName, data, response => console.log(response));
+    let socket = this.socket;
+    let _data = data;
+    console.log('start')
+    return new Promise((resolve, reject) => {
+      console.log('aa');
+      socket.emit(emitName, _data, resolve);
+      console.log('bb');
+    });
+
+    /*
+    これでもだめ
+    return new Promise((resolve, reject) => {
+      if (!this.socket) {
+          reject('No socket connection.');
+      } else {
+          this.socket.emit(emitName, data, (response) => {
+              if (response.error) {
+                  console.error(response.error);
+                  reject(response.error);
+              } else {
+                  resolve();
+              }
+          });
+      }
+    });
+    */
+    console.log('end')
+  }
 }
