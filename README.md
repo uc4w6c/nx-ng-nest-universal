@@ -44,3 +44,8 @@ https://qiita.com/cilly/items/833bc20784b0a7d56d03
 ・以下エラーの対応
 RangeError: Maximum call stack size exceeded
 https://stackoverflow.com/questions/27376522/node-js-socket-io-maximum-call-stack-size-exceeded
+
+
+・以下エラーの対応
+@MessageBody()をつけると is not functionが出力し起動しない
+https://github.com/nestjs/nest/issues/3127?ref=dtf.ru

@@ -34,17 +34,26 @@ export class WebsocketService {
     return observable;
   }
 
+  // Maximum call stack size exceededが出力する。おそらくPromiseでresponseを取得してはいけない。
   post(emitName: String, data?) {
+    console.log('start');
     // this.socket.emit(emitName, data, response => console.log(response));
     // this.socket.on(emitName, data, response => console.log(response));
-    let socket = this.socket;
-    let _data = data;
-    console.log('start')
-    return new Promise((resolve, reject) => {
+    this.socket.on('connect', () => {
+      this.socket.emit(emitName, data, response =>
+        console.log('Identity:', response),
+      );
+      console.log('connect end');
+    });
+
+    /*
+    これもだめ
+    return new Promise(function(resolve, reject) {
       console.log('aa');
-      socket.emit(emitName, _data, resolve);
+      socket.emit(emitName, 0, resolve);
       console.log('bb');
     });
+    */
 
     /*
     これでもだめ
