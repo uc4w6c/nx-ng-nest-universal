@@ -21,15 +21,18 @@ export class WebsocketComponent implements OnInit, OnDestroy {
   }
 
   onClick(){
+    this.websocketService.emit('events', { test: 'test' });
     // this.websocketService.post('identity', 0);
     console.log('click start');
     // これも意味ない
+    /*
     this.websocketService.emit('identity', 0);
     this.connection = this.websocketService.on('identity').subscribe(data => {
       // this.data = data;
       console.log(data);
       this.message = data;
     });
+    */
     
     // this.websocketService.post('identity', 0);
     /*
@@ -47,7 +50,7 @@ export class WebsocketComponent implements OnInit, OnDestroy {
       this.websocketService.connect();
       // console.log(this.websocketService.emit('hello', 'hello'));
 
-      this.websocketService.emit('events', { test: 'test' });
+      // this.websocketService.emit('events', { test: 'test' });
       this.connection = this.websocketService.on('events').subscribe(data => {
         // this.data = data;
         console.log(data);

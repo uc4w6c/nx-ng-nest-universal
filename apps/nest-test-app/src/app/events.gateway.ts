@@ -24,7 +24,7 @@ export class EventsGateway {
 
   /*
   @SubscribeMessage('hello')
-  handleEvent(data: string): string {
+  handleEvent(client, data: string): string {
     console.log('hello start')
     return data;
   }

@@ -49,3 +49,10 @@ https://stackoverflow.com/questions/27376522/node-js-socket-io-maximum-call-stac
 ・以下エラーの対応
 @MessageBody()をつけると is not functionが出力し起動しない
 https://github.com/nestjs/nest/issues/3127?ref=dtf.ru
+
+
+対応方法
+・handlerの中でproxy設定すればいけるか？
+これかな？
+import * as serverless from 'aws-serverless-express';
+serverless.proxy(server, event, context);
